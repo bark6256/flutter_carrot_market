@@ -14,7 +14,8 @@ class ProductDetail extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.topLeft,
-            child: Text(product.title, style: TextStyle(color: Colors.black87, fontSize: 16)),
+            child: Text(product.title,
+                style: TextStyle(color: Colors.black87, fontSize: 16)),
           ),
           Container(
             alignment: Alignment.topLeft,
@@ -30,10 +31,9 @@ class ProductDetail extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: Text(product.price + '원',
                 style: TextStyle(
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16
-                )),
+                    color: Colors.black87,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16)),
           ),
           Expanded(
             child: Row(
@@ -46,7 +46,8 @@ class ProductDetail extends StatelessWidget {
                 Visibility(
                     child:
                         _buildIcons(CupertinoIcons.heart, product.heartCount),
-                    visible: product.heartCount > 0),
+                    visible: product.heartCount > 0,
+                ),
               ],
             ),
           ),
